@@ -83,7 +83,7 @@ public class OrderController {
         return new ResponseEntity<>(countOfOrders, HttpStatus.OK);
     }
 
-    @GetMapping("/get-count-of-orders-left-after-given-time/{partnerId}")
+    @GetMapping("/get-count-of-orders-left-after-given-time/{partnerId}/{time}")
     public ResponseEntity<Integer> getOrdersLeftAfterGivenTimeByPartnerId(@PathVariable String time, @PathVariable String partnerId){
         Integer countOfOrders = orderService.getOrdersLeftAfterGivenTimeByPartnerId(time,partnerId);
         //countOfOrders that are left after a particular time of a DeliveryPartner

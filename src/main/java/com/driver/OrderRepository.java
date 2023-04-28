@@ -60,12 +60,10 @@ public class OrderRepository {
     }
 
     public List<String> getAllOrders() {
-        List<String> allOrders = (List<String>) orderMap.keySet();
-        return allOrders;
+        return new ArrayList<>(orderMap.keySet());
     }
     public List<String> getAllAssignedOrders(){
-        List<String> allOrders = (List<String>) orderPartnerMap.keySet();
-        return allOrders;
+        return new ArrayList<>(orderPartnerMap.keySet());
 
     }
 

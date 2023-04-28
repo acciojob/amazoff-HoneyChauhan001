@@ -17,7 +17,7 @@ public class TimeUtils {
             hh = '0' + hh;
         }
         if(mm.length() == 1){
-            mm = '0' + hh;
+            mm = '0' + mm;
         }
         return hh + ':' + mm;
 
