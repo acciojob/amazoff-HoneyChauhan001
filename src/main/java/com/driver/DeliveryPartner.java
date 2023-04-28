@@ -9,6 +9,10 @@ public class DeliveryPartner {
         this.id = id;
         this.numberOfOrders = 0;
     }
+    public DeliveryPartner(String id, int numberOfOrders){
+        this.id = id;
+        this.numberOfOrders = numberOfOrders;
+    }
 
     public String getId() {
         return id;

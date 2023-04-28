@@ -7,10 +7,17 @@ import java.util.*;
 
 @Repository
 public class OrderRepository {
-    private Map<String,Order> orderMap = new HashMap<>();
-    private Map<String,DeliveryPartner> partnerMap = new HashMap<>();
-    private Map<String,String> orderPartnerMap = new HashMap<>();
-    private Map<String, List<String>> partnerOrderMap = new HashMap<>();
+    private Map<String,Order> orderMap;
+    private Map<String,DeliveryPartner> partnerMap;
+    private Map<String,String> orderPartnerMap;
+    private Map<String, List<String>> partnerOrderMap;
+
+    public OrderRepository(){
+        this.orderMap = new HashMap<>();
+        this.partnerMap = new HashMap<>();
+        this.orderPartnerMap = new HashMap<>();
+        this.partnerOrderMap = new HashMap<>();
+    }
     public void addOrder(Order order) {
         orderMap.put(order.getId(),order);
     }
