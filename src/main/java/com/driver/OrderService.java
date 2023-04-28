@@ -56,7 +56,7 @@ public class OrderService {
         if(partnerOpt.isPresent()){
             return partnerOpt.get().getNumberOfOrders();
         }
-        return 0;
+        return null;
     }
 
     public List<String> getOrderByPartnerId(String partnerId) {
@@ -78,7 +78,10 @@ public class OrderService {
     }
 
     public Integer getCountOfUnassignedOrders() {
-        return orderRepository.getAllOrders().size() - orderRepository.getAllAssignedOrders().size();
+        int ans = orderRepository.getAllOrders().size() - orderRepository.getAllAssignedOrders().size();
+        if(ans>0)return ans;
+        return null;
+
     }
 
     public Integer getOrdersLeftAfterGivenTimeByPartnerId(String time, String partnerId) {
