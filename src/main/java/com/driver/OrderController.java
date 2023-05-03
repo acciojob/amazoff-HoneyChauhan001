@@ -25,11 +25,9 @@ public class OrderController {
     OrderService orderService;
 
     public OrderController(){
-        log.info("running controller");
     }
 
     public OrderController(OrderService orderService){
-        log.info("running controller");
         this.orderService = orderService;
     }
 
